@@ -1,9 +1,13 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ReactComponent as ListIcon } from '../../assets/listicon.svg';
 import { ReactComponent as GridIcon } from '../../assets/gridicon.svg';
 
-export default function FancyToggleSwitch({ isOn, setIsOn }) {
+interface FancyToggleSwitchProps {
+    isOn: boolean;
+    setIsOn: (isOn: boolean) => void;
+}
+
+export default function FancyToggleSwitch({ isOn, setIsOn }: FancyToggleSwitchProps): JSX.Element {
     const toggleSwitch = () => setIsOn(!isOn);
 
     return (
