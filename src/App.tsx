@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import './App.css';
 import { ReactComponent as ListIcon } from './assets/listicon.svg';
+import { ReactComponent as GridIcon } from './assets/gridicon.svg';
 
 export default function App() {
   const [isOn, setIsOn] = useState(false);
@@ -15,13 +16,13 @@ export default function App() {
           <motion.div className='handle' layout transition={spring}>
             <motion.div className='bg' layout transition={spring} />
           </motion.div>
-          <ListIcon width={80} height={80} />
+          <ListIcon width={67} height={67} />
         </>
       ): (
         <>
-          <ListIcon width={80} height={80} />
-          <motion.div className='handle' layout transition={spring}>
-            <motion.div className='bg' layout transition={spring} />
+          <GridIcon width={67} height={67} />
+          <motion.div className='handle' id='semicircle-handle' layout transition={spring}>
+            <motion.div className='bg' id='semicircle-bg' layout transition={spring} />
           </motion.div>
         </>
       )}
