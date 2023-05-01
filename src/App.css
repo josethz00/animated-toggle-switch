@@ -13,7 +13,6 @@
   height: 140px;
   border: 22px solid #484545;
   background: linear-gradient(210.55deg, #353132 -3.02%, #2B2627 93.08%);
-  display: flex;
   border-radius: 90px;
   padding: 10px;
   cursor: pointer;
@@ -28,6 +27,11 @@
   background: linear-gradient(66.56deg, #0066ffa4 11.23%, #b9c4eb79 159.88%);
   border-radius: 50%;
   box-shadow: 0px 1px 90px 27px #4062DD, inset 0.5px -1.5px 2px rgba(0, 0, 0, 0.25);
+  order: 1;
+}
+
+.handle[data-isOn="true"] {
+  order: 2;
 }
 
 .handle > .bg {
@@ -37,14 +41,10 @@
   border-radius: 50%;
 }
 
-#semicircle-handle {
-  width: 57px;
-  border-radius: 21px 50px 50px 21px;
-  box-shadow: 0px 1px 90px 27px #4062DD, inset 0.5px -1.5px 2px rgba(0, 0, 0, 0.25);
+.icon {
+  order: 2;
 }
 
-#semicircle-bg {
-  margin: 6px;
-  height: 66px;
-  border-radius: 21px 50px 50px 21px;
+.icon[data-isOn="true"] {
+  order: 1;
 }

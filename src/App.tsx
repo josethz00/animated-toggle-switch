@@ -10,29 +10,28 @@ export default function App() {
 
   return (
     <>
-    <div className='switch' onClick={toggleSwitch}>
-      {isOn ? (
-        <>
-          <motion.div className='handle' layout transition={spring}>
-            <motion.div className='bg' layout transition={spring} />
-          </motion.div>
-          <ListIcon width={67} height={67} />
-        </>
-      ): (
-        <>
-          <GridIcon width={67} height={67} />
-          <motion.div className='handle' id='semicircle-handle' layout transition={spring}>
-            <motion.div className='bg' id='semicircle-bg' layout transition={spring} />
-          </motion.div>
-        </>
-      )}
-    </div>
+      <div className='switch' onClick={toggleSwitch} data-isOn={isOn}>
+        <motion.div
+          className='handle'
+          layout
+          transition={spring}
+          data-isOn={isOn}
+        >
+          <motion.div className='bg' layout transition={spring} />
+        </motion.div>
+        <ListIcon
+          width={67}
+          height={67}
+          className='icon'
+          data-isOn={isOn}
+        />
+      </div>
     </>
-  )
+  );
 }
 
 const spring = {
   type: 'spring',
   stiffness: 190,
-  damping: 30
-}
+  damping: 30,
+};
