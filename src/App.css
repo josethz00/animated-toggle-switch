@@ -6,7 +6,11 @@
 }
 
 .switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 250px;
+  height: 140px;
   border: 22px solid #484545;
   background: linear-gradient(210.55deg, #353132 -3.02%, #2B2627 93.08%);
   display: flex;
