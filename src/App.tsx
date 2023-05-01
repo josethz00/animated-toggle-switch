@@ -19,12 +19,21 @@ export default function App() {
         >
           <motion.div className='bg' layout transition={spring} />
         </motion.div>
-        <ListIcon
-          width={67}
-          height={67}
-          className='icon'
-          data-isOn={isOn}
-        />
+        {isOn ? (
+          <GridIcon
+            width={67}
+            height={67}
+            className='icon'
+            data-isOn={isOn}
+          />
+        ) : (
+          <ListIcon
+            width={67}
+            height={67}
+            className='icon'
+            data-isOn={isOn}
+          />
+        )}
       </div>
     </>
   );
