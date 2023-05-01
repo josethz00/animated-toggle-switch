@@ -9,13 +9,21 @@ export default function App() {
 
   return (
     <>
-    <div className='switch' data-isOn={isOn} onClick={toggleSwitch}>
+    <div className='switch' onClick={toggleSwitch}>
       {isOn ? (
-        <motion.div className='handle' layout transition={spring}>
-          <motion.div className='bg' layout transition={spring} />
-        </motion.div>
-      ) : (
-        <ListIcon />
+        <>
+          <motion.div className='handle' layout transition={spring}>
+            <motion.div className='bg' layout transition={spring} />
+          </motion.div>
+          <ListIcon width={80} height={80} />
+        </>
+      ): (
+        <>
+          <ListIcon width={80} height={80} />
+          <motion.div className='handle' layout transition={spring}>
+            <motion.div className='bg' layout transition={spring} />
+          </motion.div>
+        </>
       )}
     </div>
     </>

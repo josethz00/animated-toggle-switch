@@ -8,24 +8,15 @@
 .switch {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   width: 250px;
   height: 140px;
   border: 22px solid #484545;
   background: linear-gradient(210.55deg, #353132 -3.02%, #2B2627 93.08%);
   display: flex;
-  justify-content: center;
   border-radius: 90px;
   padding: 10px;
   cursor: pointer;
-}
-
-.switch[data-isOn='true'] {
-  justify-content: flex-start;
-}
-
-.switch[data-isOn='false'] {
-  justify-content: flex-end;
 }
 
 .handle {
