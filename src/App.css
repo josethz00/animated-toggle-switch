@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 250px;
+  width: 240px;
   height: 138px;
   border: 22px solid #484545;
   background: linear-gradient(210.55deg, #353132 -3.02%, #2B2627 93.08%);
@@ -42,6 +42,7 @@
 }
 
 .icon {
+  margin: 0px 6px;
   order: 2;
 }
 
