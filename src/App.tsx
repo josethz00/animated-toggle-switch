@@ -9,12 +9,7 @@ export default function App() {
   const [selectedTheme, setSelectedTheme] = useState('');
 
   return (
-    <div style={{
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-    }}>
+    <div className='main'>
       <CustomSelect selectedOption={selectedColor} setSelectedOption={setSelectedColor}>
         <option value='' disabled>Select a color</option>
         <option value='blue'>Blue</option>
