@@ -10,7 +10,7 @@ interface FancyToggleSwitchProps {
     theme?: 'dark' | 'light';
 }
 
-export default function FancyToggleSwitch({ isOn, setIsOn, disabled, color = 'blue', theme }: FancyToggleSwitchProps): JSX.Element {
+export default function FancyToggleSwitch({ isOn, setIsOn, disabled, color = 'blue', theme = 'dark'}: FancyToggleSwitchProps): JSX.Element {
     const toggleSwitch = () => setIsOn(!isOn);
 
     const getHandleElementClassnames = () => {

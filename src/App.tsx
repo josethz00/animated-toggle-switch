@@ -6,7 +6,7 @@ import FancyToggleSwitch from './components/FancyToggleSwitch';
 export default function App() {
   const [isOn, setIsOn] = useState(false);
   const [selectedColor, setSelectedColor] = useState('');
-  const [selectedTheme, setSelectedTheme] = useState('');
+  const [selectedTheme, setSelectedTheme] = useState<'dark' | 'light'>();
 
   return (
     <div className='main'>
