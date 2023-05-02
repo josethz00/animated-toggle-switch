@@ -50,19 +50,21 @@
   order: 1;
 }
 
-#semicircle-handle {
+.semicircle-handle {
   width: 57px;
   border-radius: 21px 50px 50px 21px;
   box-shadow: 0px 1px 90px 27px #4062DD, inset 0.5px -1.5px 2px rgba(0, 0, 0, 0.25);
 }
 
-#semicircle-bg {
+.handle > .semicircle-bg {
   margin: 6px;
   height: 66px;
   border-radius: 21px 50px 50px 21px;
 }
 
-#semicircle-handle-red {
+.handle > .semicircle-handle-red {
+  width: 57px;
+  border-radius: 21px 50px 50px 21px;
   box-shadow: 0px 1px 90px 27px #D6455B, inset 0.5px -1.5px 2px rgba(0, 0, 0, 0.25);
 }
 

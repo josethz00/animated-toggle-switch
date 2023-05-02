@@ -15,12 +15,12 @@ export default function App() {
       alignItems: 'center',
       justifyContent: 'center',
     }}>
-      <CustomSelect selectedOption={selectedTheme} setSelectedOption={setSelectedTheme}>
+      <CustomSelect selectedOption={selectedColor} setSelectedOption={setSelectedColor}>
         <option value='' disabled>Select a color</option>
         <option value='blue'>Blue</option>
         <option value='red'>Red</option>
       </CustomSelect>
-      <CustomSelect selectedOption={selectedColor} setSelectedOption={setSelectedColor}>
+      <CustomSelect selectedOption={selectedTheme} setSelectedOption={setSelectedTheme}>
         <option value='' disabled>Select a theme</option>
         <option value='dark'>Dark</option>
         <option value='light'>Light</option>

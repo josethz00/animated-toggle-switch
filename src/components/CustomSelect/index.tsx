@@ -5,7 +5,6 @@ export default function CustomSelect({ selectedOption, setSelectedOption, childr
             onChange={(e) => setSelectedOption(e.target.value)}
             defaultValue='blue'
             className='custom-select'
-            placeholder="Select a color"
         >
             {children}
         </select>
