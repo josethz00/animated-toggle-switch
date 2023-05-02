@@ -5,21 +5,31 @@ import { ReactComponent as GridIcon } from '../../assets/gridicon.svg';
 interface FancyToggleSwitchProps {
     isOn: boolean;
     setIsOn: (isOn: boolean) => void;
+    disabled?: boolean;
+    color?: string;
 }
 
-export default function FancyToggleSwitch({ isOn, setIsOn }: FancyToggleSwitchProps): JSX.Element {
+export default function FancyToggleSwitch({ isOn, setIsOn, disabled, color = 'blue' }: FancyToggleSwitchProps): JSX.Element {
     const toggleSwitch = () => setIsOn(!isOn);
 
     return (
-        <div className='switch' onClick={toggleSwitch} data-isOn={isOn}>
+        <div className='switch' onClick={toggleSwitch} data-isOn={isOn} style={{
+            pointerEvents: disabled ? 'none' : 'all',
+        }}>
             <motion.div
-                className='handle'
+                className={`handle ${color === 'red' ? 'handle-red' : ''}`}
                 id={isOn && 'semicircle-handle'}
                 layout
                 transition={spring}
                 data-isOn={isOn}
             >
-                <motion.div className='bg' layout transition={spring} id = {isOn && 'semicircle-bg'} data-isOn={isOn}/>
+                <motion.div 
+                    className={`bg ${color === 'red' ? 'bg-red' : ''}`}
+                    layout
+                    transition={spring}
+                    id = {isOn && 'semicircle-bg'}
+                    data-isOn={isOn}
+                />
             </motion.div>
             {isOn ? (
                 <GridIcon
