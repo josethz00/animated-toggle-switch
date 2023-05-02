@@ -14,8 +14,7 @@ export default function FancyToggleSwitch({ isOn, setIsOn, disabled, color = 'bl
     const toggleSwitch = () => setIsOn(!isOn);
 
     const getHandleElementClassnames = () => {
-        console.log(color)
-        const classNames = ['handle'];
+        const classNames = [' '];
         if (color === 'red') {
             classNames.push('handle-red');
         }
@@ -29,7 +28,7 @@ export default function FancyToggleSwitch({ isOn, setIsOn, disabled, color = 'bl
     }
 
     const getBgElementClassnames = () => {
-        const classNames = ['bg'];
+        const classNames = [' '];
         if (color === 'red') {
             classNames.push('bg-red');
         }
@@ -40,17 +39,21 @@ export default function FancyToggleSwitch({ isOn, setIsOn, disabled, color = 'bl
     }
 
     return (
-        <div className='switch' onClick={toggleSwitch} data-isOn={isOn} style={{
-            pointerEvents: disabled ? 'none' : 'all',
-        }}>
+        <div
+            className={`switch ${theme === 'light' ? 'light-switch' : ''}`}
+            onClick={toggleSwitch}
+            data-isOn={isOn} style={{
+                pointerEvents: disabled ? 'none' : 'all',
+            }}
+        >
             <motion.div
-                className={getHandleElementClassnames()}
+                className={'handle' + getHandleElementClassnames()}
                 layout
                 transition={spring}
                 data-isOn={isOn}
             >
                 <motion.div 
-                    className={getBgElementClassnames()}
+                    className={'bg' + getBgElementClassnames()}
                     layout
                     transition={spring}
                     data-isOn={isOn}
@@ -62,6 +65,7 @@ export default function FancyToggleSwitch({ isOn, setIsOn, disabled, color = 'bl
                     height={67}
                     className='icon'
                     data-isOn={isOn}
+                    color={theme === 'light' ? '#585858' : '#FDFBF7'}
                 />
                 ) : (
                 <ListIcon
@@ -69,6 +73,7 @@ export default function FancyToggleSwitch({ isOn, setIsOn, disabled, color = 'bl
                     height={67}
                     className='icon'
                     data-isOn={isOn}
+                    color={theme === 'light' ? '#585858' : '#FDFBF7'}
                 />
             )}
         </div>

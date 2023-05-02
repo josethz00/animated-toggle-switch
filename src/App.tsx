@@ -25,7 +25,7 @@ export default function App() {
         <option value='dark'>Dark</option>
         <option value='light'>Light</option>
       </CustomSelect>
-      <FancyToggleSwitch isOn={isOn} setIsOn={setIsOn} disabled={false} color={selectedColor} />
+      <FancyToggleSwitch isOn={isOn} setIsOn={setIsOn} disabled={false} color={selectedColor} theme={selectedTheme} />
     </div>
   );
 }
