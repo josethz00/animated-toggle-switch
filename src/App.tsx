@@ -6,7 +6,7 @@ import FancyToggleSwitch from './components/FancyToggleSwitch';
 export default function App() {
   const [isOn, setIsOn] = useState(false);
   const [selectedColor, setSelectedColor] = useState('');
-  const [selectedTheme, setSelectedTheme] = useState<'dark' | 'light'>();
+  const [selectedTheme, setSelectedTheme] = useState('');
 
   return (
     <div className='main'>
@@ -20,7 +20,7 @@ export default function App() {
         <option value='dark'>Dark</option>
         <option value='light'>Light</option>
       </CustomSelect>
-      <FancyToggleSwitch isOn={isOn} setIsOn={setIsOn} disabled={false} color={selectedColor} theme={selectedTheme} />
+      <FancyToggleSwitch isOn={isOn} setIsOn={setIsOn} disabled={false} color={selectedColor} theme={selectedTheme as 'dark' | 'light'} />
     </div>
   );
 }

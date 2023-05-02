@@ -1,4 +1,12 @@
-export default function CustomSelect({ selectedOption, setSelectedOption, children }): JSX.Element {
+import * as React from "react";
+
+interface CustomSelectProps {
+    selectedOption?: string;
+    setSelectedOption: React.Dispatch<React.SetStateAction<string>>;
+    children: React.ReactNode;
+}
+
+export default function CustomSelect({ selectedOption, setSelectedOption, children }: CustomSelectProps): JSX.Element {
     return (
         <select
             value={selectedOption}
